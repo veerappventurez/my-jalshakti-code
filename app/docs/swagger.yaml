@@ -1,0 +1,160 @@
+openapi: 3.0.0
+info:
+  title: Write project name here
+  version: 1.0.0
+servers:
+  - url: http://localhost:5000
+  - url: http://localhost:5600
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+tags: 
+  - name: Auth
+    description: Endpoints for Auth    
+paths:
+  /api/v1/auth/login:
+    post:
+      tags:
+        - default
+      summary: Login
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                email: user@yopmail.com
+                deviceId: '1234567789675'
+                deviceToken: '3455788'
+                deviceType: os
+                password: Vikas@123
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Accept-Language
+          in: header
+          schema:
+            type: string
+          example: hn
+        - name: x-api-key
+          in: header
+          schema:
+            type: string
+          example: >-
+            kjghfhdfsshgndcljdjsflsdfljuy575itjkshkjoujoiuhjdjkjkjshskkjkjhsjkhjkhjkshkj
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1/auth/send-otp:
+    post:
+      tags:
+        - default
+      summary: send-otp
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                phone_no: '987584849'
+      parameters:
+        - name: x-api-key
+          in: header
+          schema:
+            type: string
+          example: >-
+            kjghfhdfsshgndcljdjsflsdfljuy575itjkshkjoujoiuhjdjkjkjshskkjkjhsjkhjkhjkshkj
+        - name: Accept-Language
+          in: header
+          schema:
+            type: string
+          example: hn
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1/auth/verify-otp:
+    post:
+      tags:
+        - default
+      summary: verify-otp
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                phone_no: ''
+                otp: '998'
+      parameters:
+        - name: x-api-key
+          in: header
+          schema:
+            type: string
+          example: >-
+            kjghfhdfsshgndcljdjsflsdfljuy575itjkshkjoujoiuhjdjkjkjshskkjkjhsjkhjkhjkshkj
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1/auth/logout:
+    post:
+      tags:
+        - default
+      summary: Logout
+      requestBody:
+        content: {}
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: x-api-key
+          in: header
+          schema:
+            type: string
+          example: >-
+            kjghfhdfsshgndcljdjsflsdfljuy575itjkshkjoujoiuhjdjkjkjshskkjkjhsjkhjkhjkshkj
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1/auth/register_user:
+    post:
+      tags:
+        - default
+      summary: Logout
+      requestBody:
+        content: {}
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: x-api-key
+          in: header
+          schema:
+            type: string
+          example: >-
+            kjghfhdfsshgndcljdjsflsdfljuy575itjkshkjoujoiuhjdjkjkjshskkjkjhsjkhjkhjkshkj
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+   
+
+
+
+
+
+            
+
+
+
+
+
+            

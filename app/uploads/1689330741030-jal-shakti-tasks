@@ -1,0 +1,64 @@
+changes to be done:- 
+1.) db table resetting after saving the file and testing the api in thunderclient
+2.)otp functionality with signup
+3.) add complaint 
+- Select Complaint Category
+- Select Department
+- Your Name
+- Mobile No
+- Address Line 1
+- Address Line 2
+- District
+- Your Email
+- Supporting Document (if any) - Only one document or file will be uploaded at a time.
+- Complaint Description:
+- Have You Previously Filed A Complaint Regarding This? If yes, please enter the Complaint ID
+- field to add complaint id if selected the checkbox
+- Submit
+
+Note: The email address, phone number, and name will be automatically linked with every submitted complaint.
+
+4.)detailed view of the complaint
+- Complaint ID
+- Name
+- Complaint Category
+- Department
+- Mobile Number
+- Email Address
+- District
+- Address
+- Supporting Document
+- Comment
+- View Status Button
+5.) view status
+List of the status and their remark such as:
+- Status
+- Date
+- Remark
+
+
+
+
+
+{
+"complaint_id": "12",
+      "complaint_category": "random",
+      "department_name": "random",
+     "user_name": "demo_user",
+      "email": "veer@appventurez.com",
+      "phone_no": "9818704045",
+    "district": "jammu",
+      "addressLine1": "address1",
+      "addressLine2": "address2",
+      "supporting_document":"demo",
+      "comment": "comment description"
+}
+
+
+
+
+http://localhost:9000/api/v1/auth/addComplaint
+
+
+
+
